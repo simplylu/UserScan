@@ -1018,6 +1018,21 @@ printf "\e[1;92m Found!\e[0m https://www.tripit.com/people/%s#/profile/basic-inf
 printf "https://www.tripit.com/people/%s#/profile/basic-info\n" $username >> $username.txt
 fi
 
+## TikTok
+
+printf "\e[1;77m[\e[0m\e[1;92m+\e[0m\e[1;77m] TikTok: \e[0m"
+check1=$(curl -s -I "https://www.tiktok.com/@$username?" -H "Accept-Language: en" -L | grep -o 'HTTP/2 404\|404 Not Found' ; echo $?)
+
+if [[ $check1 == *'0'* ]] ; then 
+printf "\e[1;93mNot Found!\e[0m\n"
+elif [[ $check1 == *'1'* ]]; then 
+
+printf "\e[1;92m Found!\e[0m https://www.tiktok.com/@$username?\n" $username
+printf "https://www.tiktok.com/@$username?\n" $username >> $username.txt
+fi
+
+
+
 ## Basecamp
 
 printf "\e[1;77m[\e[0m\e[1;92m+\e[0m\e[1;77m] Basecamp: \e[0m"
