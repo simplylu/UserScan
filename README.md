@@ -19,3 +19,7 @@
   $ cd UserScan
   
   $ bash finduser.sh
+
+
+
+Code was optimized from XHackx & Sherlock
