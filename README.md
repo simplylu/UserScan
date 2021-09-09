@@ -20,6 +20,8 @@
   
   $ bash finduser.sh
 
-
+PS: Ihr könnt gern weitere Webseiten die euch einfallen hinzufügen, 
+daher habe ich es überhaupt gemacht:D
 
 Code was optimized from XHak9x & Sherlock
+
