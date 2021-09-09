@@ -1,5 +1,4 @@
 #!/bin/bash
-# FindUser v1.2
 # Author: @N3ll4
 
 
@@ -13,7 +12,7 @@ printf "\e[1;36m  @!@  !@!  !@@!!  @!!!:!   @!@!!@!   !@@!!  !@!      @!@!@!@! @
 printf "\e[1;36m  !!:  !!!     !:! !!:      !!: :!!      !:! :!!      !!:  !!! !!:  !!!  \e[0m\n"
 printf "\e[1;36m   :.:: :  ::.: :  : :: :::  :   : : ::.: :   :: :: :  :   : : ::    :  \e[0m\n"
 printf "\n"
-printf "\e[1;93m .:.:.\e[0m\e[1;35m v1.2 UserScan coded by: @N3ll4 \e[0m\e[1;93m.:.:.\e[0m\n"
+printf "\e[1;93m .:.:.\e[0m\e[1;35m v1.2 UserScan coded optimized by: @N3ll4 \e[0m\e[1;93m.:.:.\e[0m\n"
 printf "\n"
 
 
