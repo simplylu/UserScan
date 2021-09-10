@@ -89,6 +89,19 @@ elif [[ $check_youtube == *'0'* ]]; then
 printf "\e[1;93mNot Found!\e[0m\n"
 fi
 
+## TikTok
+
+printf "\e[1;77m[\e[0m\e[1;92m+\e[0m\e[1;77m] TikTok: \e[0m"
+check1=$(curl -s -I "https://www.tiktok.com/@$username?" -H "Accept-Language: en" -L | grep -o 'HTTP/2 404\|404 Not Found' ; echo $?)
+
+if [[ $check1 == *'0'* ]] ; then 
+printf "\e[1;93mNot Found!\e[0m\n"
+elif [[ $check1 == *'1'* ]]; then 
+
+printf "\e[1;92m Found!\e[0m https://www.tiktok.com/@$username?\n" $username
+printf "https://www.tiktok.com/@$username?\n" $username >> $username.txt
+fi
+
 ## BLOGGER
 
 printf "\e[1;77m[\e[0m\e[1;92m+\e[0m\e[1;77m] Blogger: \e[0m"
@@ -102,18 +115,7 @@ elif [[ $check == *'0'* ]]; then
 printf "\e[1;93mNot Found!\e[0m\n"
 fi
 
-## GLOOGLE PLUS
 
-printf "\e[1;77m[\e[0m\e[1;92m+\e[0m\e[1;77m] GooglePlus: \e[0m"
-check=$(curl -s "https://plus.google.com/+$username/posts" -L -H "Accept-Language: en" -i | grep -o 'HTTP/2 404' ; echo $?)
-
-
-if [[ $check == *'1'* ]]; then
-printf "\e[1;92m Found!\e[0m https://plus.google.com/+%s/posts\n" $username
-printf "https://plus.google.com/+%s/posts\n" $username >> $username
-elif [[ $check == *'0'* ]]; then
-printf "\e[1;93mNot Found!\e[0m\n"
-fi
 
 ## REDDIT
 
@@ -1017,18 +1019,7 @@ printf "\e[1;92m Found!\e[0m https://www.tripit.com/people/%s#/profile/basic-inf
 printf "https://www.tripit.com/people/%s#/profile/basic-info\n" $username >> $username.txt
 fi
 
-## TikTok
 
-printf "\e[1;77m[\e[0m\e[1;92m+\e[0m\e[1;77m] TikTok: \e[0m"
-check1=$(curl -s -I "https://www.tiktok.com/@$username?" -H "Accept-Language: en" -L | grep -o 'HTTP/2 404\|404 Not Found' ; echo $?)
-
-if [[ $check1 == *'0'* ]] ; then 
-printf "\e[1;93mNot Found!\e[0m\n"
-elif [[ $check1 == *'1'* ]]; then 
-
-printf "\e[1;92m Found!\e[0m https://www.tiktok.com/@$username?\n" $username
-printf "https://www.tiktok.com/@$username?\n" $username >> $username.txt
-fi
 
 
 
