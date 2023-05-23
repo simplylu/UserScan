@@ -1045,6 +1045,18 @@ scanner() {
         printf "https://www.twitch.tv/$username\n" $username >> $username.txt
     fi
 
+    ## Linktree
+
+    printf "\e[1;77m[\e[0m\e[1;92m+\e[0m\e[1;77m] Linktree: \e[0m"
+    check1=$(curl -s -i "https://linktr.ee/$username" | grep "HTTP/2 404" ; echo $?)
+
+    if [[ $check1 == *'0'* ]]; then
+        printf "\e[1;93mNot Found!\e[0m\n"
+    elif [[ $check1 == *'1'* ]]; then
+        printf "\e[1;92m Found!\e[0m https://linktr.ee/%s\n" $username
+        printf "https://linktr.ee/$username\n" $username >> $username.txt
+    fi
+    
 
     partial
 }
